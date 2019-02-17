@@ -1,0 +1,60 @@
+2019/02/17 18:11:13.477 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 18:18:59.859 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 18:27:26.157 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 18:31:36.072 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 18:32:57.587 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 18:37:10.994 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 18:37:55.186 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 18:39:29.741 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 18:41:06.789 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 18:57:13.246 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 19:01:40.012 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 19:05:04.237 [C] [asm_amd64.s:522] the request url is  /admin/upload
+2019/02/17 19:05:04.237 [C] [asm_amd64.s:522] Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/02/17 19:05:04.237 [C] [asm_amd64.s:522] /usr/local/Cellar/go/1.11.5/libexec/src/runtime/asm_amd64.s:522
+2019/02/17 19:05:04.237 [C] [asm_amd64.s:522] /usr/local/Cellar/go/1.11.5/libexec/src/runtime/panic.go:513
+2019/02/17 19:05:04.237 [C] [asm_amd64.s:522] /usr/local/Cellar/go/1.11.5/libexec/src/runtime/panic.go:82
+2019/02/17 19:05:04.237 [C] [asm_amd64.s:522] /usr/local/Cellar/go/1.11.5/libexec/src/runtime/signal_unix.go:390
+2019/02/17 19:05:04.237 [C] [asm_amd64.s:522] /usr/local/Cellar/go/1.11.5/libexec/src/bufio/bufio.go:100
+2019/02/17 19:05:04.237 [C] [asm_amd64.s:522] /usr/local/Cellar/go/1.11.5/libexec/src/bufio/bufio.go:132
+2019/02/17 19:05:04.237 [C] [asm_amd64.s:522] /usr/local/Cellar/go/1.11.5/libexec/src/image/format.go:66
+2019/02/17 19:05:04.237 [C] [asm_amd64.s:522] /usr/local/Cellar/go/1.11.5/libexec/src/image/format.go:80
+2019/02/17 19:05:04.237 [C] [asm_amd64.s:522] /Users/zhaofan/go_project/src/blog/controllers/admin/upload.go:387
+2019/02/17 19:05:04.237 [C] [asm_amd64.s:522] /Users/zhaofan/go_project/src/blog/controllers/admin/upload.go:101
+2019/02/17 19:05:04.237 [C] [asm_amd64.s:522] /usr/local/Cellar/go/1.11.5/libexec/src/runtime/asm_amd64.s:522
+2019/02/17 19:05:04.237 [C] [asm_amd64.s:522] /usr/local/Cellar/go/1.11.5/libexec/src/reflect/value.go:447
+2019/02/17 19:05:04.237 [C] [asm_amd64.s:522] /usr/local/Cellar/go/1.11.5/libexec/src/reflect/value.go:308
+2019/02/17 19:05:04.237 [C] [asm_amd64.s:522] /Users/zhaofan/go_project/src/github.com/astaxie/beego/router.go:847
+2019/02/17 19:05:04.237 [C] [asm_amd64.s:522] /usr/local/Cellar/go/1.11.5/libexec/src/net/http/server.go:2741
+2019/02/17 19:05:04.237 [C] [asm_amd64.s:522] /usr/local/Cellar/go/1.11.5/libexec/src/net/http/server.go:1847
+2019/02/17 19:05:04.237 [C] [asm_amd64.s:522] /usr/local/Cellar/go/1.11.5/libexec/src/runtime/asm_amd64.s:1333
+2019/02/17 19:05:21.369 [I] [asm_amd64.s:522] 提交链接https://www.inana.top/article/test到百度成功,返回:{"remain":4999999,"success":1}
+2019/02/17 19:05:35.132 [I] [asm_amd64.s:522] 提交链接https://www.inana.top/article/test2到百度成功,返回:{"remain":4999998,"success":1}
+2019/02/17 19:08:26.941 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 19:08:46.964 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 19:11:04.504 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 19:12:07.564 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 19:15:10.740 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 19:18:01.705 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 19:19:24.042 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 19:20:28.449 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 19:20:47.921 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 19:35:02.686 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 20:29:08.671 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 20:29:48.840 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 20:30:15.684 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 20:39:34.800 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 20:56:42.248 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 21:15:32.812 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 21:15:55.489 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 21:17:38.085 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 21:29:52.642 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 21:32:51.525 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 21:38:28.826 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 22:44:44.488 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 22:48:26.478 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 22:49:06.932 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 22:54:15.311 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 22:57:53.219 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 23:08:07.630 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
+2019/02/17 23:09:23.668 [I] [asm_amd64.s:1333] http server Running on http://127.0.0.1:8081
