@@ -1,15 +1,29 @@
-﻿# Host: 127.0.0.1  (Version 5.6.13)
-# Date: 2018-07-12 12:58:18
-# Generator: MySQL-Front 6.0  (Build 2.20)
+CREATE DATABASE  IF NOT EXISTS `beego_blog` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `beego_blog`;
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+--
+-- Host: 192.168.90.11    Database: beego_blog
+-- ------------------------------------------------------
+-- Server version	5.6.37
 
-CREATE DATABASE IF NOT EXISTS beego_blog;
-USE beego_blog;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-#
-# Structure for table "tb_album"
-#
+--
+-- Table structure for table `tb_album`
+--
 
 DROP TABLE IF EXISTS `tb_album`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_album` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL DEFAULT '',
@@ -25,17 +39,24 @@ CREATE TABLE `tb_album` (
   KEY `tb_album_rank` (`rank`),
   KEY `tb_album_photonum` (`photonum`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
-#
-# Data for table "tb_album"
-#
+--
+-- Dumping data for table `tb_album`
+--
 
+LOCK TABLES `tb_album` WRITE;
+/*!40000 ALTER TABLE `tb_album` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tb_album` ENABLE KEYS */;
+UNLOCK TABLES;
 
-#
-# Structure for table "tb_comments"
-#
+--
+-- Table structure for table `tb_comments`
+--
 
 DROP TABLE IF EXISTS `tb_comments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_comments` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `obj_pk_id` bigint(20) NOT NULL,
@@ -56,18 +77,24 @@ CREATE TABLE `tb_comments` (
   KEY `tb_comments_is_removed` (`is_removed`),
   KEY `tb_comments_obj_pk_type` (`obj_pk_type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
+--
+-- Dumping data for table `tb_comments`
+--
 
-#
-# Data for table "tb_comments"
-#
+LOCK TABLES `tb_comments` WRITE;
+/*!40000 ALTER TABLE `tb_comments` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tb_comments` ENABLE KEYS */;
+UNLOCK TABLES;
 
-
-#
-# Structure for table "tb_link"
-#
+--
+-- Table structure for table `tb_link`
+--
 
 DROP TABLE IF EXISTS `tb_link`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_link` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `sitename` varchar(80) NOT NULL DEFAULT '',
@@ -79,19 +106,26 @@ CREATE TABLE `tb_link` (
   KEY `tb_link_sitename` (`sitename`),
   KEY `tb_link_url` (`url`),
   KEY `tb_link_rank` (`rank`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
-#
-# Data for table "tb_link"
-#
+--
+-- Dumping data for table `tb_link`
+--
 
-INSERT INTO `tb_link` VALUES (1,'爱在发烧','/static/upload/smallpic/20180619/1529369471932023700.jpg','http://azfashao.com/','一个非常棒的站点，博主也很厉害',99),(2,'AN STUDIO','/static/upload/smallpic/20180621/1529576340049076300.jpg','//shop59002320.taobao.com','外设韩国原单店铺',100);
+LOCK TABLES `tb_link` WRITE;
+/*!40000 ALTER TABLE `tb_link` DISABLE KEYS */;
+INSERT INTO `tb_link` VALUES (3,'python修行路','/static/upload/default/user-default-60x60.png','http://www.cnblogs.com/zhaof/','',0);
+/*!40000 ALTER TABLE `tb_link` ENABLE KEYS */;
+UNLOCK TABLES;
 
-#
-# Structure for table "tb_mood"
-#
+--
+-- Table structure for table `tb_mood`
+--
 
 DROP TABLE IF EXISTS `tb_mood`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_mood` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `content` longtext NOT NULL,
@@ -100,57 +134,75 @@ CREATE TABLE `tb_mood` (
   PRIMARY KEY (`id`),
   KEY `tb_mood_posttime` (`posttime`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
-#
-# Data for table "tb_mood"
-#
+--
+-- Dumping data for table `tb_mood`
+--
 
+LOCK TABLES `tb_mood` WRITE;
+/*!40000 ALTER TABLE `tb_mood` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tb_mood` ENABLE KEYS */;
+UNLOCK TABLES;
 
-#
-# Structure for table "tb_option"
-#
+--
+-- Table structure for table `tb_option`
+--
 
 DROP TABLE IF EXISTS `tb_option`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_option` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL DEFAULT '',
   `value` longtext NOT NULL,
   PRIMARY KEY (`id`),
   KEY `tb_option_name` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
-#
-# Data for table "tb_option"
-#
+--
+-- Dumping data for table `tb_option`
+--
 
-INSERT INTO `tb_option` VALUES (1,'sitename','inana用心交织的生活'),(2,'siteurl','https://inana.top/'),(3,'subtitle','带着她和她去旅行'),(4,'pagesize','15'),(5,'keywords','Python,MySQL,Golang,Windows,Linux'),(6,'description','来一场说走就走的旅行'),(7,'theme','double'),(8,'timezone','8'),(9,'stat',''),(10,'weibo','https://weibo.com/p/1005051484763434'),(11,'github','https://github.com/griffin702'),(12,'mybirth','1987-09-30'),(13,'albumsize','9'),(14,'nickname','云丶先生'),(15,'myoldcity','湖北省 黄石市'),(16,'mycity','湖北省 武汉市'),(17,'myprifessional','游戏运维攻城师'),(18,'myworkdesc','1、Windows、Linux服务器运维，主要包括IIS、Apache、Nginx、Firewall、MySQL、SQLServer等常用服务。
-2、日常备份与灾备恢复等确保数据安全，以及DBA相关其他职能。
-3、负责公司内部网络运维，硬件维护、内外网分离以及常用第三方软件运维，主要包括SVN、FTP、BugFree、企业邮箱等服务。
-4、业务线部分Golang服务端维护及二次开发。'),(19,'mylang','Python、Golang、SQL、Shell'),(20,'mylike','旅行、游戏、技术');
+LOCK TABLES `tb_option` WRITE;
+/*!40000 ALTER TABLE `tb_option` DISABLE KEYS */;
+INSERT INTO `tb_option` VALUES (1,'sitename','python修行路'),(2,'siteurl',''),(3,'subtitle','Stay hangury, Stay foolish'),(4,'pagesize','15'),(5,'keywords','Python,MySQL,Golang,Windows,Linux'),(6,'description','Stay hangury, Stay foolish'),(7,'theme','double'),(8,'timezone','8'),(9,'stat',''),(10,'weibo',''),(11,'github','https://github.com/pythonsite'),(12,'mybirth','1992-10-15'),(13,'albumsize','9'),(14,'nickname','coders'),(15,'myoldcity','河南'),(16,'mycity','北京'),(17,'myprifessional','python开发工程师'),(18,'myworkdesc','1、python服务端开发'),(19,'mylang','Python、Golang'),(20,'mylike','技术，音乐，恐怖电影');
+/*!40000 ALTER TABLE `tb_option` ENABLE KEYS */;
+UNLOCK TABLES;
 
-#
-# Structure for table "tb_permission"
-#
+--
+-- Table structure for table `tb_permission`
+--
 
 DROP TABLE IF EXISTS `tb_permission`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_permission` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
-#
-# Data for table "tb_permission"
-#
+--
+-- Dumping data for table `tb_permission`
+--
 
-INSERT INTO `tb_permission` VALUES (1,'user'),(2,'article'),(3,'album'),(4,'link'),(5,'mood'),(6,'tag'),(7,'system'),(8,'fileupload');
+LOCK TABLES `tb_permission` WRITE;
+/*!40000 ALTER TABLE `tb_permission` DISABLE KEYS */;
+INSERT INTO `tb_permission` VALUES (3,'album'),(2,'article'),(8,'fileupload'),(4,'link'),(5,'mood'),(7,'system'),(6,'tag'),(1,'user');
+/*!40000 ALTER TABLE `tb_permission` ENABLE KEYS */;
+UNLOCK TABLES;
 
-#
-# Structure for table "tb_photo"
-#
+--
+-- Table structure for table `tb_photo`
+--
 
 DROP TABLE IF EXISTS `tb_photo`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_photo` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `albumid` bigint(20) NOT NULL DEFAULT '0',
@@ -162,17 +214,24 @@ CREATE TABLE `tb_photo` (
   KEY `tb_photo_des` (`des`),
   KEY `tb_photo_posttime` (`posttime`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
-#
-# Data for table "tb_photo"
-#
+--
+-- Dumping data for table `tb_photo`
+--
 
+LOCK TABLES `tb_photo` WRITE;
+/*!40000 ALTER TABLE `tb_photo` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tb_photo` ENABLE KEYS */;
+UNLOCK TABLES;
 
-#
-# Structure for table "tb_post"
-#
+--
+-- Table structure for table `tb_post`
+--
 
 DROP TABLE IF EXISTS `tb_post`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_post` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) NOT NULL,
@@ -201,17 +260,24 @@ CREATE TABLE `tb_post` (
   KEY `tb_post_updated` (`updated`),
   KEY `tb_post_istop` (`istop`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
-#
-# Data for table "tb_post"
-#
+--
+-- Dumping data for table `tb_post`
+--
 
+LOCK TABLES `tb_post` WRITE;
+/*!40000 ALTER TABLE `tb_post` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tb_post` ENABLE KEYS */;
+UNLOCK TABLES;
 
-#
-# Structure for table "tb_tag"
-#
+--
+-- Table structure for table `tb_tag`
+--
 
 DROP TABLE IF EXISTS `tb_tag`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_tag` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) NOT NULL DEFAULT '',
@@ -220,17 +286,24 @@ CREATE TABLE `tb_tag` (
   KEY `tb_tag_name` (`name`),
   KEY `tb_tag_count` (`count`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
-#
-# Data for table "tb_tag"
-#
+--
+-- Dumping data for table `tb_tag`
+--
 
+LOCK TABLES `tb_tag` WRITE;
+/*!40000 ALTER TABLE `tb_tag` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tb_tag` ENABLE KEYS */;
+UNLOCK TABLES;
 
-#
-# Structure for table "tb_tag_post"
-#
+--
+-- Table structure for table `tb_tag_post`
+--
 
 DROP TABLE IF EXISTS `tb_tag_post`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_tag_post` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `tag_id` bigint(20) NOT NULL DEFAULT '0',
@@ -243,17 +316,24 @@ CREATE TABLE `tb_tag_post` (
   KEY `tb_tag_post_poststatus` (`poststatus`),
   KEY `tb_tag_post_posttime` (`posttime`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
-#
-# Data for table "tb_tag_post"
-#
+--
+-- Dumping data for table `tb_tag_post`
+--
 
+LOCK TABLES `tb_tag_post` WRITE;
+/*!40000 ALTER TABLE `tb_tag_post` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tb_tag_post` ENABLE KEYS */;
+UNLOCK TABLES;
 
-#
-# Structure for table "tb_user"
-#
+--
+-- Table structure for table `tb_user`
+--
 
 DROP TABLE IF EXISTS `tb_user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_user` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `username` varchar(15) NOT NULL DEFAULT '',
@@ -277,9 +357,25 @@ CREATE TABLE `tb_user` (
   KEY `tb_user_lastip` (`lastip`),
   KEY `tb_user_permission` (`permission`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
-#
-# Data for table "tb_user"
-#
+--
+-- Dumping data for table `tb_user`
+--
 
-INSERT INTO `tb_user` VALUES (1,'admin','e10adc3949ba59abbe56e057f20f883e','云丶先生','117976509@qq.com','2018-07-12 12:55:55',0,'127.0.0.1','',1,'1|2|3|4|5|6|7|8','/static/upload/default/user-default-60x60.png',0);
+LOCK TABLES `tb_user` WRITE;
+/*!40000 ALTER TABLE `tb_user` DISABLE KEYS */;
+INSERT INTO `tb_user` VALUES (1,'admin','e10adc3949ba59abbe56e057f20f883e','coders','hjzhaofan@gmail.com','2019-02-18 13:16:17',2,'192.168.90.61','',1,'1|2|3|4|5|6|7|8','/static/upload/default/user-default-60x60.png',0);
+/*!40000 ALTER TABLE `tb_user` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2019-02-18 13:17:32
